@@ -41,3 +41,10 @@ TEST(PasswordTest, onecap_onelowercase)
 	bool actual = my_password.has_mixed_case("aA");
 	ASSERT_EQ(true, actual);
 }
+
+TEST(PasswordTest, oneupper)
+{
+	Password my_password;
+	bool actual = my_password.has_mixed_case("aeaffeafeafaefPweefeafefeaf");
+	ASSERT_EQ(true, actual);
+}
